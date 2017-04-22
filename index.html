@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="refresh" content="10"> -->
+	<title>Colors</title>
+
+	<link rel="stylesheet" type="text/css" href="color.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>colors</h1>
+		</div>
+	</div>
+	<script type="text/javascript" src="colors.js"></script>
+	<script type="text/javascript">
+		var container = document.getElementsByClassName('container')[0];
+
+		for(var c = 0; c < colorblock.length; c++){
+			createColorBlock(colorblock[c], container);
+		}
+		var colorblocks = document.getElementsByClassName('colorItem');
+			for(var i = 0, l = colorblocks.length; i < l; i++){
+				colorblocks[i].addEventListener("click", changeBodyColor, false);
+
+			}
+
+			function changeBodyColor(ev){
+				var body = document.body;
+				body.style.backgroundColor = ev.target.style.backgroundColor;
+
+			}
+		
+	</script>
+</body>
+</html>
